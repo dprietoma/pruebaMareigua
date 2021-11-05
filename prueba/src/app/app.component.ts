@@ -40,6 +40,7 @@ export class AppComponent implements OnInit {
 
   multiplos(): void {
     let multiplo;
+    let item = new Object();
     for (let i = 1; i <= 100; i++) {
       if ((i % 3) === 0) {
         if ((i % 5) === 0) {
@@ -52,11 +53,10 @@ export class AppComponent implements OnInit {
       } else {
         multiplo = '';
       }
-      let item = new Object();
       item = {
         numero: i,
         descripcionMultiplo: multiplo
-      }
+      };
       this.listNumberMultiplos.push(item);
     }
   }
